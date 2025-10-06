@@ -5,7 +5,7 @@ import Profile from "./components/Profile"
 import { Provider } from "react-redux"
 import appStore from "./utils/appStore"
 import Feed from "./components/Feed"
-import Connection from "./components/connection"
+import Connection from "./components/Connection"
 import Request from "./components/Request"
 
 function App() {

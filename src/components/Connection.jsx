@@ -30,7 +30,7 @@ const Connection = () => {
 
     if(!connections) return;
 
-    if(connections.length === 0) return <h1>No connectin Found</h1>
+    if(connections.length === 0) return <h1 className='flex justify-center font-bold my-10 '>No connectin Found</h1>
 
   return (
       <div  className='my-10 '>
@@ -43,7 +43,7 @@ const Connection = () => {
      const {_id, firstName, lastName, photoUrl, age, gender, about, skills} = connection;    
 
      return (
-        <div key={_id} className='flex m-4 p-4 gap-5 rounded-lg bg-base-300 w-1/2 mx-auto ' >
+        <div key={_id} className='flex m-4 p-4 gap-5 rounded-lg bg-violet-800 w-1/2 mx-auto ' >
             <div>
                 <img
                 alt="photo"

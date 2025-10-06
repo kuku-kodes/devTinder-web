@@ -12,12 +12,13 @@ const Feed = () => {
   const dispatch = useDispatch();
 
   const getFeed = async () => {
-    if(feed) return;
+    if (feed && feed.length > 0) return;
+
     try{
       const res = await axios.get(BASE_URL + "/feed", {withCredentials: true});
-    dispatch(addFeed(res.data));
+    dispatch(addFeed(res.data.data));
     }catch (err){
-      console.err(err || "Something went wrong!!");
+      console.error(err || "Something went wrong!!");
     }
     
   };
@@ -27,10 +28,12 @@ const Feed = () => {
   }, []);
 
   return (
-  feed && (
+  feed && feed.length > 0 ? (
     <div className='flex justify-center my-10'>
-      <UserCard user={feed?.data[4]} />
+      <UserCard user={feed[0]} />
     </div>
+    ) : (
+      <p className="text-center mt-10">No feed available</p>
   )
 );
 }

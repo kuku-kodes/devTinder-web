@@ -11,8 +11,8 @@ const EditProfile = ({user}) => {
 
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
-  const [gender, setGender] = useState(user.gender);
+  const [age, setAge] = useState(user.age || "");
+  const [gender, setGender] = useState(user.gender || "");
   const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
   const [about, setAbout] = useState(user.about);
   const [skills, setSkills] = useState(user.skills);
@@ -63,7 +63,7 @@ const saveProfile = async () => {
 return (
     <div className='flex justify-center my-10' >
      <div className='flex justify-center mx-10 '>
-    <div className="card card-border bg-base-300 w-96">
+    <div className="card card-border bg-violet-800 w-96">
   <div className="card-body">
     <h2 className="card-title justify-center">Edit Profile</h2>
     <fieldset className="fieldset">
@@ -151,7 +151,7 @@ return (
 </fieldset>
     <p className='text-red-500'>{error}</p>
     <div className="card-actions justify-center m-2">
-      <button className="btn btn-primary" onClick={saveProfile}>Save Profile</button>
+      <button className="btn btn-secondary" onClick={saveProfile}>Save Profile</button>
     </div>
   </div>
 </div>
