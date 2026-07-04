@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Body from "./components/Body"
-import Login from "./components/Login"
-import Profile from "./components/Profile"
+import Body from "./components/core/Body"
+import Login from "./components/features/Login"
+import Profile from "./components/features/Profile"
 import { Provider } from "react-redux"
 import appStore from "./utils/appStore"
-import Feed from "./components/Feed"
-import Connection from "./components/Connection"
-import Request from "./components/Request"
+import Feed from "./components/features/Feed"
+import Connection from "./components/features/Connection"
+import Request from "./components/features/Request"
 
 function App() {
   
