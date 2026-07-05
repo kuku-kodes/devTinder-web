@@ -233,7 +233,7 @@ const EditProfile = ({ user }) => {
         }
       );
 
-      dispatch(addUser(res.data.data));
+      dispatch(addUser(res?.data?.data));
 
       setShowToast(true);
 
